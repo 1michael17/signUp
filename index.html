@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="rightPanel">
+            <div class="rightContainer">
+                <h3 class="logo">
+                    TheCompany
+                </h3>
+                <div class="text">
+                    <h3>Welcome to the Team</h3>
+                    <p class="textIntro">You're just two quick steps away from getting started.</p>
+                    <div class="steps">
+
+                        <p><b>🔹 Step 1:</b> Enter your basic details</p>
+                        <p><b>🔹 Step 2:</b> Set up your login information</p>
+                    </div>
+                    <p>Your information helps us create a secure and personalized experience for you within our system.
+                        Let’s get started</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="leftPanel">
+            <form action="#">
+                <fieldset id="step1">
+                    <div class="formHeader titleGroup">
+                        <legend>Step 1: Basic Info</legend>
+                        <small>1/2</small>
+                    </div>
+                    
+                    <!-- * Containing the input and Select fields -->
+                    
+                    <div class="inputBody">
+                        <div class="row row1">
+                            <!-- ** First Name -->
+                            <div class="inputGroup">
+                                <label for="firstName" aria-required="true">First Name <span
+                                        class="toRed">*</span></label>
+                                <input type="text" maxlength="120" name="firstName" id="firstName" class="inputs" placeholder="e.g., Michael" required>
+                            </div>
+                            <!-- ** Last Name -->
+                            <div class="inputGroup">
+                                <label for="lastName" aria-required="true">Last Name <span
+                                        class="toRed">*</span></label>
+                                <input type="text" name="lastName" id="lastName" required placeholder="e.g., One"
+                                    class="inputs" maxlength="120">
+                            </div>
+                        </div>
+                        <div class="row row2">
+                            <!-- ** Date of Birth -->
+                            <div class="inputGroup">
+                                <label for="dob" aria-required="true">Date of Birth <span class="toRed">*</span></label>
+                                <input type="date" name="dob" id="dob" min="1980-01-01" max="2007-12-31" class="inputs"
+                                    aria-describedby="Month - Date - Year" required>
+                            </div>
+                            <!-- ** Gender -->
+                            <div class="inputGroup">
+                                <label for="gender">Gender <span class="toRed">*</span></label>
+                                <select name="gender" id="gender" class="inputs">
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- ** Phone Number -->
+                        <div class="inputGroup">
+                            <label for="phoneNo" aria-required="true">Phone Number <span class="toRed">*</span></label>
+                            <div class="input-group">
+                                <input type="tel" id="phone" maxlength="11" pattern="\d{11}" inputmode="numeric" />
+                                <span id="phone-icon" class="icon"></span>
+                            </div>
+                        </div>
+                        <!-- ** Home Address-->
+                        <div class="inputGroup">
+                            <label for="homeAddress">Home Address</label>
+                            <input type="text" name="homeAddress" id="homeAddress"
+                                placeholder="e.g., No 1 @ Somewhere Street" class="inputs" />
+                        </div>
+                    </div>
+                    <!-- ** Buttons -->
+                    <div class="buttonGroup">
+                        <button class="login-btn testBtn toClear" type="reset">Clear</button>
+                        <button class="login-btn testBtn toNext" type="button">Next</button>
+                    </div>
+                    <hr>
+                    <div class="footer">
+                        Already have an account? <a href="#">Sign In here</a>
+                    </div>
+                </fieldset>
+
+                <fieldset id="step2">
+                    <div class="titleGroup">
+                        <legend>Log In Detail</legend>
+                        <small>2/2</small>
+                    </div>
+                    <div class="inputBody">
+                        <div class="inputGroup">
+                            <label for="dEmail">Email <span class="toRed">*</span></label>
+                            <input type="email" name="dEmail" id="dEmail" required>
+                        </div>
+                        <div class="inputGroup">
+                            <label for="dPassword">Create Password <span class="toRed">*</span></label>
+                            <div class="underPswd">
+                                <input type="password" name="dPassword" id="dPassword" required>
+                                <div class="option">
+                                    <input type="checkbox" id="showPassword1" />
+                                    <p class="small">Show Password</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DEL AFTER -->
+                        <div class="inputGroup">
+                            <label for="confirmPassword">Confirm Password <span class="toRed">*</span></label>
+
+                            <div class="input-group pass-Group">
+                                <input type="password" name="confirmPassword" id="confirmPassword" required>
+                                <span id="pass-icon" class="passIcon"></span>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="showPassword2" />
+                                <p class="small">Show Password</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttonGroup">
+                        <button class="login-btn toClear toBack" type="reset">back</button>
+                        <button class="login-btn toNext toSend" type="submit">Save</button>
+                    </div>
+                    <hr>
+                    <div class="footer">
+                        Already have an account? <a href="#">Sign In here</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="signUpScript.js"></script>
+
+</body>
+
+</html>
