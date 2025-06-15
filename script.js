@@ -3,8 +3,6 @@ const confirmPassword = document.getElementById('confirmPassword');
 const inputs = document.querySelectorAll('.inputs');
 const showPass1 = document.getElementById('showPassword1')
 const showPass2 = document.getElementById('showPassword2')
-const passwordInput = document.getElementById('dPassword');
-const pswdCheck = document.querySelector('.check');
 
 const passIcon = document.querySelector('.passIcon');
 const aMatch = document.querySelector('.aMatch');
@@ -13,15 +11,12 @@ const backBtn = document.querySelector('.toBack');
 const nextBtn = document.querySelector('.toNext');
 const step1 = document.querySelector('#step1');
 const step2 = document.querySelector('#step2');
+const phoneInput = document.querySelector('#phone');
 
 let allValid = true;
 
 confirmPassword.addEventListener('input', () => { toMatchCheck() });
 dPasswordInput.addEventListener('input', () => { toMatchCheck() });
-
-if (confirmPassword === '' && dPasswordInput === '') {
-    aMatch.style.color = 'grey';
-}
 
 sendBtn.addEventListener('click', () => { validity() });
 
@@ -34,6 +29,19 @@ nextBtn.addEventListener('click', () => {
 });
 
 backBtn.addEventListener('click', () => { toStep(step2, step1) });
+
+phoneInput.addEventListener('input', () => {
+    const value = phoneInput.value;
+    if (/^\d{11}$/.test(value)) {
+        phoneIcon.textContent = '✔️';
+        phoneIcon.classList.add('valid');
+        phoneIcon.classList.remove('invalid');
+    } else {
+        phoneIcon.textContent = '❌';
+        phoneIcon.classList.add('invalid');
+        phoneIcon.classList.remove('valid');
+    }
+});
 
 /** *FIXED*/
 function toMatchCheck() {
@@ -62,25 +70,10 @@ function validity() {
     });
 }
 
-const phoneInput = document.getElementById('phone');
 const phoneIcon = document.getElementById('phone-icon');
 
-phoneInput.addEventListener('input', () => {
-    const value = phoneInput.value;
-    if (/^\d{11}$/.test(value)) {
-        phoneIcon.textContent = '✔️';
-        phoneIcon.classList.add('valid');
-        phoneIcon.classList.remove('invalid');
-    } else {
-        phoneIcon.textContent = '❌';
-        phoneIcon.classList.add('invalid');
-        phoneIcon.classList.remove('valid');
-    }
-});
+/** * For password hide and visibility */
 
-/**
- * For password hide and visibility
-*/
 showPass1.addEventListener('change', () => {
     dPasswordInput.type = showPass1.checked ? 'text' : 'password';
 });
