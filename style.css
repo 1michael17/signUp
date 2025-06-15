@@ -15,8 +15,8 @@
 /* **Right Panel */
 .rightPanel {
     width: 45%;
-    background: linear-gradient(to bottom right, #becfff, #1a4585);
-    background: url(loginBG3.jpg) center center no-repeat;
+    background: linear-gradient(to bottom right, #a8baee, #1a4585);
+    background: url(../loginBG3.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -53,7 +53,6 @@
 
 .text p:nth-child(4) {
     padding: 8% 0%;
-
 }
 
 /* **Left Panel */
@@ -77,7 +76,7 @@ fieldset {
     max-height: 90vh;
     display: flex;
     flex-direction: column;
-    padding: 1%;
+    padding: 2%;
     border: none;
     background-color: #ffffffc9;
     border-radius: 2%;
@@ -173,6 +172,7 @@ select {
 #dPassword, #confirmPassword{
     margin-bottom: 1px;
 }
+
 /* Buttons */
 
 .login-btn {
