@@ -16,7 +16,7 @@
 .rightPanel {
     width: 45%;
     background: linear-gradient(to bottom right, #becfff, #1a4585);
-    background: url(./forLogin/loginBG3.jpg) center center no-repeat;
+    background: url(/loginBG3.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -69,7 +69,6 @@
 
 form {
     padding: 1rem;
-    border: solid 1px red;
 }
 
 fieldset {
@@ -78,11 +77,12 @@ fieldset {
     max-height: 90vh;
     display: flex;
     flex-direction: column;
-    padding: 2%;
+    padding: 1%;
     border: none;
     background-color: #ffffffc9;
     border-radius: 2%;
     margin: 1% auto;
+    border: solid 1px gold;
 }
 
 /* **General in both fieldset (.step1 & .step2) */
@@ -119,11 +119,6 @@ select {
     font-size: 1rem;
     box-sizing: border-box;
 }
-
-/* .inputGroup input:invalid,
-select:invalid{
-    outline-color: #ff0000;
-} */
 
 .input-group {
     position: relative;
@@ -226,12 +221,12 @@ select:invalid{
 /* * Footer */
 hr {
     border: solid 1px #6868681e;
-    margin: 4% 0px;
+    margin: 4% 0px 3%;
 }
 
 .footer {
     font-size: 14px;
-    margin-bottom: 4px;
+    margin-bottom: 2%;
     color: #333333;
     text-align: center;
 }
@@ -259,12 +254,20 @@ hr {
 }
 
 /* Make it responsive */
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     form {
         padding: 0.5rem;
     }
 
     input {
         font-size: 0.95rem;
+    }
+
+    .rightPanel{
+        display: none;
+    }
+
+    .leftPanel{
+        width: 100%;
     }
 }
