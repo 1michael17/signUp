@@ -81,7 +81,8 @@ fieldset {
     background-color: #ffffffc9;
     border-radius: 2%;
     margin: 1% auto;
-    border: solid 1px gold;
+    box-shadow: 2px 4px 10px 2px #0000002c, 0px 1px 10px 2px #00000010;
+
 }
 
 /* **General in both fieldset (.step1 & .step2) */
