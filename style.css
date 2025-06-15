@@ -16,7 +16,7 @@
 .rightPanel {
     width: 45%;
     background: linear-gradient(to bottom right, #becfff, #1a4585);
-    background: url(/loginBG3.jpg) center center no-repeat;
+    background: url(loginBG3.jpg) center center no-repeat;
     background-size: cover;
 }
 
