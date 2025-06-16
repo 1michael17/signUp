@@ -27,8 +27,16 @@
                         Let’s get started</p>
                 </div>
 
+                <div class="rightPanelFooter">
+                    <div class="toRow">
+                        <img src="./odin-lined.png" alt="The Odin Project logo" height="70px" width="50px">
+                        <br>
+                        <h4>The Odin Project </h4>
+                    </div>
+                    <p> &copy; 2025 * <b>Michael One </b> * Sign Up project</p>
+                </div>
             </div>
-        </div>
+            </div>
 
         <div class="leftPanel">
             <form action="#">
@@ -37,16 +45,17 @@
                         <legend>Step 1: Basic Info</legend>
                         <small>1/2</small>
                     </div>
-                    
+
                     <!-- * Containing the input and Select fields -->
-                    
+
                     <div class="inputBody">
                         <div class="row row1">
                             <!-- ** First Name -->
                             <div class="inputGroup">
                                 <label for="firstName" aria-required="true">First Name <span
                                         class="toRed">*</span></label>
-                                <input type="text" maxlength="120" name="firstName" id="firstName" class="inputs" placeholder="e.g., Michael" required>
+                                <input type="text" maxlength="120" name="firstName" id="firstName" class="inputs"
+                                    placeholder="e.g., Michael" required>
                             </div>
                             <!-- ** Last Name -->
                             <div class="inputGroup">
@@ -66,7 +75,7 @@
                             <!-- ** Gender -->
                             <div class="inputGroup">
                                 <label for="gender">Gender <span class="toRed">*</span></label>
-                                <select name="gender" id="gender" class="inputs">
+                                <select name="gender" id="gender" class="inputs" required>
                                     <option value="female">Female</option>
                                     <option value="male">Male</option>
                                 </select>
@@ -76,15 +85,16 @@
                         <div class="inputGroup">
                             <label for="phoneNo" aria-required="true">Phone Number <span class="toRed">*</span></label>
                             <div class="input-group">
-                                <input type="tel" id="phone" maxlength="11" pattern="\d{11}" inputmode="numeric" />
+                                <input type="tel" id="phone" maxlength="11" pattern="\d{11}" inputmode="numeric"
+                                    required />
                                 <span id="phone-icon" class="icon"></span>
                             </div>
                         </div>
                         <!-- ** Home Address-->
                         <div class="inputGroup">
-                            <label for="homeAddress">Home Address</label>
+                            <label for="homeAddress">Home Address <span class="toRed">*</span></label>
                             <input type="text" name="homeAddress" id="homeAddress"
-                                placeholder="e.g., No 1 @ Somewhere Street" class="inputs" />
+                                placeholder="e.g., No 1 @ Somewhere Street" class="inputs" required />
                         </div>
                     </div>
                     <!-- ** Buttons -->
@@ -135,7 +145,7 @@
 
                     <div class="buttonGroup">
                         <button class="login-btn toClear toBack" type="button">back</button>
-                        <button class="login-btn toNext toSend" type="submit">Save</button>
+                        <button class="login-btn toNext toSend" type="reset">Save</button>
                     </div>
                     <hr>
                     <div class="footer">
